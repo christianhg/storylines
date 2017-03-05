@@ -1,0 +1,10 @@
+{
+  "buildOnSave": false,
+  "compileOnSave": false,
+  "compilerOptions": {
+    "allowUnreachableCode": false,
+    "module": "commonjs",
+    "strictNullChecks": true,
+    "target": "es6"
+  }
+}

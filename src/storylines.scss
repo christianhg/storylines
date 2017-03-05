@@ -1,0 +1,49 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 10px;
+  padding: 0;
+}
+
+.root {
+}
+
+editor,
+state,
+storyline {
+  display: block;
+}
+
+editor {
+  float: left;
+  width: 75%;
+}
+
+storyline {
+  background: rgb(220, 220, 220);
+  margin-left: 5px;
+  margin-right: 5px;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.storylines {
+  display: flex;
+  padding-top: 10px;
+}
+
+state {
+  float: right;
+  padding-left: 5px;
+  width: 25%;
+}
+
+pre {
+  background: rgb(200, 200, 200);
+  margin: 0;
+  padding: 10px
+}

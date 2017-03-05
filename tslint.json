@@ -1,0 +1,116 @@
+{
+  "rules": {
+    "align": [
+      true,
+      "arguments",
+      "parameters",
+      "statements"
+    ],
+    "array-type": [
+      true,
+      "array"
+    ],
+    "arrow-parens": [
+      true,
+      "ban-single-arg-parens"
+    ],
+    "arrow-return-shorthand": [
+      true,
+      "multiline"
+    ],
+    "class-name": true,
+    "eofline": true,
+    "import-spacing": true,
+    "indent": [
+      true,
+      "spaces"
+    ],
+    "max-line-length": [
+      true,
+      120
+    ],
+    "member-ordering": [
+      true,
+      "public-before-private",
+      "static-before-instance",
+      "variables-before-functions"
+    ],
+    "new-parens": true,
+    "newline-before-return": true,
+    "no-angle-bracket-type-assertion": true,
+    "no-any": false,
+    "no-arg": true,
+    "no-consecutive-blank-lines": true,
+    "no-conditional-assignment": true,
+    "no-console": [
+      true,
+      "log"
+    ],
+    "no-construct": true,
+    "no-debugger": true,
+    "no-default-export": true,
+    "no-duplicate-super": true,
+    "no-duplicate-variable": true,
+    "no-empty": true,
+    "no-eval": true,
+    "no-mergeable-namespace": true,
+    "no-null-keyword": true,
+    "no-require-imports": true,
+    "no-trailing-whitespace": true,
+    "no-var-keyword": true,
+    "no-var-requires": true,
+    "no-unsafe-finally": true,
+    "no-unnecessary-initializer": true,
+    "no-unused-variable": true,
+    "object-literal-key-quotes": [
+      true,
+      "as-needed"
+    ],
+    "object-literal-shorthand": true,
+    "object-literal-sort-keys": true,
+    "one-variable-per-declaration": [
+      true,
+      "ignore-for-loop"
+    ],
+    "ordered-imports": false,
+    "prefer-const": true,
+    "prefer-function-over-method": [
+      true,
+      "allow-public",
+      "allow-protected"
+    ],
+    "prefer-method-signature": true,
+    "quotemark": [
+      true,
+      "single"
+    ],
+    "semicolon": true,
+    "switch-default": true,
+    "trailing-comma": [
+      false,
+      {
+        "multiline": "never",
+        "singleline": "never"
+      }
+    ],
+    "triple-equals": true,
+    "typedef": [
+      true,
+      "call-signature",
+      "member-variable-declaration",
+      "parameter",
+      "property-declaration"
+    ],
+    "whitespace": [
+      true,
+      "check-branch",
+      "check-decl",
+      "check-module",
+      "check-operator",
+      "check-preblock",
+      "check-separator",
+      "check-type",
+      "check-typecast"
+    ]
+  }
+}
