@@ -4,7 +4,6 @@
     "remove:build": "rm -rf dist",
     "prebuild": "npm run remove:build",
     "build": "webpack",
-    "predev": "npm run remove:build",
     "dev": "webpack-dev-server"
   },
   "devDependencies": {
