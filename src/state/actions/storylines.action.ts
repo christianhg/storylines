@@ -32,4 +32,16 @@ export function removeStorylines(): RemoveStorylinesAction {
   };
 }
 
-export type StorylineAction = AddStorylineAction | RemoveStorylineAction | RemoveStorylinesAction;
+export interface AddStoryElementToStorylineAction extends Action {
+  type: 'ADD_STORY_ELEMENT_TO_STORYLINE';
+  storylineId: number;
+}
+
+export function addStoryElementToStoryline(storylineId: number): AddStoryElementToStorylineAction {
+  return {
+    type: 'ADD_STORY_ELEMENT_TO_STORYLINE',
+    storylineId
+  };
+}
+export type StorylineAction = AddStorylineAction | RemoveStorylineAction |
+                              RemoveStorylinesAction | AddStoryElementToStorylineAction;

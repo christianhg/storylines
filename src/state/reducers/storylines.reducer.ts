@@ -6,8 +6,10 @@ export function storylines(storylines: Storyline[] = [], action: StorylineAction
     const id: number = storylines.length > 0
         ? storylines[storylines.length - 1].id + 1
         : 0;
+    const elements: number[] = [];
     const storyline: Storyline = {
-      id
+      id,
+      elements
     };
 
     return [...storylines, storyline];
@@ -20,6 +22,16 @@ export function storylines(storylines: Storyline[] = [], action: StorylineAction
 
   if (action.type === 'REMOVE_STORYLINES') {
     return [];
+  }
+
+  if (action.type === 'ADD_STORY_ELEMENT_TO_STORYLINE') {
+    return storylines.map((storyline: Storyline) => {
+        if (storyline.id === action.storylineId) {
+          storyline.elements.push(storyline.elements.length);
+        }
+
+        return storyline;
+      });
   }
 
   return storylines;
