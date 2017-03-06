@@ -4,11 +4,17 @@
     "remove:build": "rm -rf dist",
     "prebuild": "npm run remove:build",
     "build": "webpack",
-    "dev": "webpack-dev-server"
+    "dev": "webpack-dev-server",
+    "test": "tsc && ava",
+    "posttest": "find ./src -name '*.js' -type f -delete"
+  },
+  "ava": {
+    "files": "tests/*.js"
   },
   "devDependencies": {
     "@types/angular": "^1.6.7",
     "angular": "^1.6.2",
+    "ava": "^0.18.2",
     "awesome-typescript-loader": "^3.0.8",
     "babel-core": "^6.23.1",
     "babel-loader": "^6.3.2",
