@@ -34,8 +34,7 @@ class EditorComponentController implements IComponentController {
 
   constructor() {
     const render = () => {
-      const { stateMonitor } = store.getState() as State;
-      const { storylines } = store.getState() as State;
+      const { stateMonitor, storylines } = store.getState() as State;
 
       this.stateMonitor = stateMonitor;
       this.storylines = storylines;
