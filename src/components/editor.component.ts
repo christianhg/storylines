@@ -1,4 +1,5 @@
 import { IComponentController, IComponentOptions } from 'angular';
+import { Unsubscribe } from 'redux';
 
 import { addStoryline, removeStorylines } from '../state/actions/storylines.action';
 import { State, store } from '../state/store';
@@ -29,6 +30,8 @@ class EditorComponentController implements IComponentController {
   public storylines: Storyline[];
   public stateMonitor: StateMonitor;
 
+  private unsubscribe: Unsubscribe;
+
   constructor() {
     const render = () => {
       const { stateMonitor } = store.getState() as State;
@@ -38,9 +41,13 @@ class EditorComponentController implements IComponentController {
       this.storylines = storylines;
     };
 
-    store.subscribe(render);
+    this.unsubscribe = store.subscribe(render);
 
     render();
+  }
+
+  public $onDestroy(): void {
+    this.unsubscribe();
   }
 
   public addStoryline(): void {

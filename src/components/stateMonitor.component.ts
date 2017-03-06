@@ -1,4 +1,5 @@
 import { IComponentController, IComponentOptions } from 'angular';
+import { Unsubscribe } from 'redux';
 
 import { State, store } from '../state/store';
 
@@ -13,11 +14,17 @@ export class StateMonitorComponent implements IComponentOptions {
 class StateMonitorComponentController implements IComponentController {
   public state: State;
 
+  private unsubscribe: Unsubscribe;
+
   constructor() {
     const render = () => this.state = store.getState() as State;
 
-    store.subscribe(render);
+    this.unsubscribe = store.subscribe(render);
 
     render();
+  }
+
+  public $onDestroy(): void {
+    this.unsubscribe();
   }
 }
