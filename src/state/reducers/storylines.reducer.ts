@@ -26,12 +26,15 @@ export function storylines(storylines: Storyline[] = [], action: StorylineAction
 
   if (action.type === 'ADD_STORY_ELEMENT_TO_STORYLINE') {
     return storylines.map((storyline: Storyline) => {
-        if (storyline.id === action.storylineId) {
-          storyline.elements.push(storyline.elements.length);
-        }
+      if (storyline.id === action.storylineId) {
+        return {
+          elements: [...storyline.elements, storyline.elements.length],
+          id: storyline.id
+        };
+      }
 
-        return storyline;
-      });
+      return storyline;
+    });
   }
 
   return storylines;
