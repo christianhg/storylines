@@ -43,5 +43,8 @@ export function addStoryElementToStoryline(storylineId: number): AddStoryElement
     storylineId
   };
 }
-export type StorylineAction = AddStorylineAction | RemoveStorylineAction |
-                              RemoveStorylinesAction | AddStoryElementToStorylineAction;
+
+export type StorylineAction = AddStorylineAction
+    | RemoveStorylineAction
+    | RemoveStorylinesAction
+    | AddStoryElementToStorylineAction;
