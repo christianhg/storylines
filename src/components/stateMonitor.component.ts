@@ -2,15 +2,15 @@ import { IComponentController, IComponentOptions } from 'angular';
 
 import { State, store } from '../state/store';
 
-export class StateComponent implements IComponentOptions {
-  public controller: any = StateComponentController;
+export class StateMonitorComponent implements IComponentOptions {
+  public controller: any = StateMonitorComponentController;
   public controllerAs: string = 'state';
   public template: string = `
-    <pre>{{state.state | json}}</pre>
+    <pre ng-show="state.state.stateMonitor.shown">{{state.state | json}}</pre>
   `;
 }
 
-class StateComponentController implements IComponentController {
+class StateMonitorComponentController implements IComponentController {
   public state: State;
 
   constructor() {

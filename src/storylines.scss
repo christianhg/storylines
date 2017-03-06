@@ -8,7 +8,7 @@ body {
 }
 
 editor,
-state,
+state-monitor,
 storyline {
   display: block;
 }
@@ -33,7 +33,7 @@ storyline {
   padding-top: 10px;
 }
 
-state {
+state-monitor {
   float: right;
   padding-left: 5px;
   width: 25%;
