@@ -1,5 +1,5 @@
 {
-  "name": "angular-redux-typescript",
+  "name": "storylines",
   "scripts": {
     "remove:build": "rm -rf dist",
     "prebuild": "npm run remove:build",
