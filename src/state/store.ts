@@ -7,7 +7,6 @@ import { Storyline } from './models/storylines.model';
 export interface State {
   stateMonitor: StateMonitor;
   storylines: Storyline[];
-  //storyelements: Storyelement[];
 }
 
 const reducers = combineReducers({
