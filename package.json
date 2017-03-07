@@ -3,7 +3,7 @@
   "scripts": {
     "remove:build": "rm -rf dist",
     "prebuild": "npm run remove:build",
-    "build": "webpack",
+    "build": "webpack -p",
     "dev": "webpack-dev-server",
     "test": "tsc && ava",
     "posttest": "find ./src -name '*.js' -type f -delete"
