@@ -44,7 +44,8 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            plugins: ['transform-object-rest-spread']
+            plugins: ['transform-object-rest-spread'],
+            presets: ['es2015'],
           }
         }
       }
