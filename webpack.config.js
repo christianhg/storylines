@@ -42,7 +42,10 @@ module.exports = {
         enforce: 'post',
         test: /\.ts$/,
         use: {
-          loader: 'babel-loader'
+          loader: 'babel-loader',
+          options: {
+            plugins: ['transform-object-rest-spread']
+          }
         }
       }
     ]
