@@ -14,10 +14,8 @@ export class StorylineComponent implements IComponentOptions {
   public template: string = `
     Storyline: {{storyline.storyline.id}}
     <button ng-click="storyline.remove()">x</button>
-    <button ng-click="storyline.addElement()">add</button>
-    <div ng-repeat="elementId in storyline.storyline.elements">
-	    {{elementId}}
-    </div>
+    <button ng-click="storyline.addElement()">Add Story Element</button>
+    <story-element ng-repeat="elementId in storyline.storyline.elements"></story-element>
   `;
 }
 
